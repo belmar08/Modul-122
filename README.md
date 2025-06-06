@@ -109,3 +109,95 @@ id >> info.txt
 wc -w < info.txt
 
 ![History aufgabe 5d](History_Aufgabe_5d.png)
+
+## Erstes Bash Script
+
+Zeigt das aktuelle Verzeichnis an, in dem das Script ausgeführt wird
+Listet alle Dateien und Ordner im aktuellen Verzeichnis auf
+Erstellt einen neuen Ordner mit dem Namen 'testordner'
+Erstellt eine neue, leere Datei im Ordner 'testordner'
+Schreibt den Text 'Hallo Welt' in die Datei (überschreibt vorhandenen Inhalt)
+
+![Meinscript](meinscript_Tag_3.png)
+
+## Erstes Bash Script
+
+- Zeigt, wo ich gerade bin (pwd).
+
+- Zeigt, was im Ordner drin ist (ls).
+
+- Macht neuen Ordner namens testordner.
+
+- Macht neue Datei datei.txt im Ordner.
+
+- Schreibt „Hallo Welt“ in die Datei.
+
+## Variablen
+
+### Script
+
+```
+#!/bin/bash
+BIRTHDATE="Jan 1, 2000"
+Presents=10
+BIRTHDAY=$(date -d "$BIRTHDATE" +%A)
+
+if [ "$BIRTHDATE" == "Jan 1, 2000" ] ; then
+    echo "BIRTHDATE ist korrekt, es ist $BIRTHDATE"
+else
+    echo "BIRTHDATE ist nicht korrekt"
+fi
+if [ $Presents == 10 ] ; then
+    echo "Ich habe $Presents Geschenke bekommen."
+else
+    echo "Presents ist nicht korrekt"
+fi
+if [ "$BIRTHDAY" == "Saturday" ]||[ "$BIRTHDAY" == "Samstag" ] ; then
+    echo "Ich wurde an einem $BIRTHDAY geboren."
+else
+    echo "BIRTHDAY ist nicht korrekt"
+fi
+```
+
+## Arithmetische Operatoren (Integer)
+
+- var=$(( Int-Arithmetik ))
+- var=$[ Int-Arithmetik ]
+
+- a + b Addition (a plus b)
+- a - b Substraction (a minus b)
+- a * b Multiplication (a mal b)
+- a / b Division (Ganzzahl) (a geteilt durch b)
+- a % b modulo (der Ganzzahlrest von a geteilt durch b)
+- a ** b Potenz (a hoch b)
+
+```
+#!/bin/bash
+COST_PINEAPPLE=50
+COST_BANANA=4
+COST_WATERMELON=23
+COST_BASKET=1
+TOTAL=$(($COST_PINEAPPLE + 2 * $COST_BANANA + 3 * $COST_WATERMELON + $COST_BASKET))
+echo "Gesamtpreis ist: $TOTAL"
+```
+
+## Zeichenketten Verarbeitung (Strings)
+
+```
+#!/bin/bash
+
+BUFFETT="Life is like a snowball. The important thing is finding wet snow and a really long hill."
+
+ISAY=$BUFFETT
+
+ISAY=${ISAY/snow/foot}
+ISAY=${ISAY/snow/}
+ISAY=${ISAY/finding/getting}
+
+WET_INDEX=$(expr index "$ISAY" "w")
+WET_END=$((WET_INDEX + 3))
+
+ISAY=${ISAY:0:$WET_END}
+
+echo "$ISAY"
+```
