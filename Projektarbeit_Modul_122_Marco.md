@@ -24,7 +24,7 @@ In produktiven Server-Umgebungen ist es sehr wichtig, dass CPU, RAM und Speicher
   - Netzwerkstatus 
   - Anzahl Fehlgeschlagene Login-Versuche 
 - Verarbeitung und Auswertung der erfassten Daten
-- Alarmierung per E-Mail bei Überschreitung von Grenzwerten (.zip)
+- Alarmierung per E-Mail bei Überschreitung von Grenzwerten
 - Erstellung eines systematischen Statusberichts (Textdatei) bei jeder Ausführung
 - Fehlerbehandlung bei fehlenden oder ungültigen Daten
 - Protokollierung der Skript-Ausführung in einer Logdatei
