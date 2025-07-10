@@ -1,10 +1,10 @@
 #!/bin/bash
 # -----------------------------------------------------------------------------
-# Script Name : monitor.sh
+# Script Name : system_monitor.sh
 # Beschreibung: Das Skript überwacht CPU, RAM, Speicher, Benutzer, Netzwerk und
 #               fehlgeschlagene Logins. Es schreibt Logs und sendet bei hoher
-#               CPU-Auslastung (>90 %) automatisch eine E-Mail aber auch bei
-#               den anderen Daten. Läuft regelmässig per Cronjob.
+#               CPU-Auslastung (>10 %) automatisch eine E-Mail, das folgende
+#               macht es auch bei RAM. Läuft regelmässig per Cronjob.
 # Autor       : Marco Belk
 # Datum       : 11.07.2025
 # Version     : 1.0
