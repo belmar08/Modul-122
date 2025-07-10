@@ -50,7 +50,7 @@ In produktiven Server-Umgebungen ist es sehr wichtig, dass CPU, RAM und Speicher
 
 | Ausgabeart       | Inhalt / Format                              | Beispiel                          |
 |------------------|---------------------------------------------|----------------------------------|
-| Statusbericht    | Textdatei mit Zeitstempel und Systemdaten   | `system_report_2025-06-20_13-00.log` |
+| Statusbericht    | Textdatei mit Zeitstempel und Systemdaten   | `system_warning_2025-06-20_13-00.log` |
 | Alarm-E-Mail     | Betreff und Nachricht mit Details zum Fehler| Betreff: WARNUNG – CPU über 90%  |
 | Logdatei        | Protokoll der Skriptausführungen mit Statusmeldungen | `system_monitor.log`              |
 
